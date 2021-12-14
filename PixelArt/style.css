@@ -10,20 +10,20 @@ body {
 
 #title  {
   font-family: 'MinecraftiaRegular';
+  margin-top: 10px;
+  font-size: 60px;
   font-weight: bold;
   font-style: normal;
   color: white;
-  text-shadow:black 2px 2px 2px;
+  /* text-shadow:black 2px 2px 2px; */
 }
 
 .input-color {
   display: inline-block;
 }
 
-
-/* https://www.w3schools.com/cssref/playit.asp?filename=playcss_display&preval=flex */
 .color {
-  border: black solid 1px;
+  border: black dashed 1px;
   height: 50px;
   width: 50px;
   display: inline-block;
@@ -50,7 +50,7 @@ body {
   width: 300px;
   height: 300px;
   display: grid;
-  border: 3px solid black;
+  border: 4px dashed black;
   /* grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(5, 1fr); */
 }
@@ -63,13 +63,6 @@ body {
   width: 69px;
 }
 
-
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/repeat() */
-
-/* https://developer.mozilla.org/pt-BR/docs/Web/CSS
-/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#a_unidade_fr */
-
-/* https://www.w3schools.com/cssref/tryit.asp?filename=trycss_grid-template-columns */
 .pixel {
   background-color: grey;
   border: 1px black solid;
@@ -84,10 +77,12 @@ body {
 }
 
 .button {
-  width: 50%;
+  width: 32%;
   height: 40px;
   border: 3px solid black;
   box-shadow: black 2px 2px 2px;
+  font-family: 'MinecraftiaRegular';
+  font-weight: 400;
 }
 
 .button:hover {
@@ -109,7 +104,7 @@ body {
   width: 20%;
   border: 3px solid black;
   color: rgb(26, 2, 2);
-  padding: 5px 5px 20px 5px;
+  padding: 5px 5px 5px 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -121,3 +116,21 @@ body {
 #generate-board:hover {
   box-shadow: black 0px 0px 0px;
 }
+
+#sound {
+  width: 30px;
+  height: 30px;
+  background-color: lightcyan;
+  display: inline-block;
+  padding: 0px 5px 4px 5px;
+}
+
+#sound-icon {
+  width:25px;
+  height:19px;
+  margin-left: 2px;
+  margin-top: 5px;
+}
+
+
+

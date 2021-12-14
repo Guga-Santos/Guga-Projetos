@@ -26,8 +26,14 @@
     </div>
     <div class="buttonDiv">
         <button class="button" id="clear-board" >Limpar</button>
-        <input class="button" id="board-size" type="number" min="1" value="12">
+        <input class="button" id="board-size" type="number" min="1" value="10">
         <button class="button" id="generate-board" onclick="changeValue()">VQV</button>
+        <div class="button" id="sound">
+            <img id="sound-icon" class="" src="./images/SoundOff.png" alt="Icone de audio off">
+        </div>
+    </div>
+    <div id="audio-container">
+        <audio autoplay src="./midia/SuperMarioBros.mp3"></audio>
     </div>
     <script src="script.js"></script>
 </body>

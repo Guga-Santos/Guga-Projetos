@@ -4,18 +4,38 @@ window.onload = document.querySelector('#black').className += ' selected';
 
 const pixelBoard = document.querySelector('#pixel-board');
 
+//
+let draw = false
+//
+
 function numeroGrid(n) {
   for (let i = 1; i <= n * n; i += 1) {
     const div = document.createElement('div');
     div.classList.add('pixel');
 
-    div.addEventListener('click', () => {
+    div.addEventListener('mouseover', () => {
       const select = document.querySelector('.selected').style.backgroundColor;
+      if(draw) { 
       div.style.backgroundColor = select;
+    }
+    });
+    div.addEventListener('mousedown', () => {
+      const select = document.querySelector('.selected').style.backgroundColor;
+      if(!draw) { 
+      div.style.backgroundColor = select;
+    }
     });
     pixelBoard.appendChild(div);
   }
 }
+
+window.addEventListener('mousedown', function(){
+  draw = true
+})
+
+window.addEventListener('mouseup', function(){
+  draw = false
+})
 // Cria uma função com parâmetro 'n' (que será alterado para inputV.value na função acima), cria um laço for que irá percorrer de 1 até (n * n), que foi a maneira de dobrar n.
 // Pra cada iteração do for, ele cria uma div e adiciona à ela a classe 'pixel'.
 // Cria um evento que, após um clique, a div clicada receba o backgroundColor da cor que está com a classe 'selected'.
@@ -151,3 +171,27 @@ redPick.onload = redPick.style.backgroundColor = `rgb(${random4},${random5},${ra
 yellowPick.onload = yellowPick.style.backgroundColor = `rgb(${random7},${random8},${random9})`;
 
 // https://www.w3schools.com/jsref/event_onload.asp
+
+const cor1 = document.querySelector('#color1')
+
+cor1.addEventListener('click', () => {
+  blackPick.style.backgroundColor = cor1.value
+})
+
+const cor2 = document.querySelector('#color2')
+
+cor2.addEventListener('click', () => {
+  bluePick.style.backgroundColor = cor2.value
+})
+
+const cor3 = document.querySelector('#color3')
+
+cor3.addEventListener('click', () => {
+  redPick.style.backgroundColor = cor3.value
+})
+
+const cor4 = document.querySelector('#color4')
+
+cor4.addEventListener('click', () => {
+  yellowPick.style.backgroundColor = cor4.value
+})

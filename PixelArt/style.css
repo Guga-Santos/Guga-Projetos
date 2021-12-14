@@ -3,7 +3,23 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-image: url('https://wallpaperaccess.com/full/3052460.jpg');
+  background-size: 1280px 700px;
+
 }
+
+#title  {
+  font-family: 'MinecraftiaRegular';
+  font-weight: bold;
+  font-style: normal;
+  color: white;
+  text-shadow:black 2px 2px 2px;
+}
+
+.input-color {
+  display: inline-block;
+}
+
 
 /* https://www.w3schools.com/cssref/playit.asp?filename=playcss_display&preval=flex */
 .color {
@@ -31,12 +47,20 @@ body {
 }
 
 #pixel-board {
-  width: fit-content;
-  height: fit-content;
+  width: 300px;
+  height: 300px;
   display: grid;
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1px;
+  border: 3px solid black;
+  /* grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr); */
+}
+
+#color-palette {
+  width: 300px;
+}
+
+.color {
+  width: 69px;
 }
 
 
@@ -47,21 +71,23 @@ body {
 
 /* https://www.w3schools.com/cssref/tryit.asp?filename=trycss_grid-template-columns */
 .pixel {
-  background-color: white;
+  background-color: grey;
   border: 1px black solid;
-  width: 40px;
-  height: 40px;
 }
 
 .buttonDiv {
-  width: 225px;
+  width: 300px;
   height: 50px;
-  margin: 10px;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 10px;
 }
 
 .button {
   width: 50%;
   height: 40px;
+  border: 3px solid black;
+  box-shadow: black 2px 2px 2px;
 }
 
 .button:hover {
@@ -69,25 +95,29 @@ body {
   height: 45px;
   border-radius: 5px;
   font-size: 105%;
+  box-shadow: black 0px 0px 0px;
 }
 
 #board-size {
   display: inline-block;
-  width: 20%;
-  height: 35px;
+  width: 23%;
+  height: 32px;
+ 
 }
 
 #generate-board {
   width: 20%;
-  border: none;
+  border: 3px solid black;
   color: rgb(26, 2, 2);
-  padding: 14px 22px 14px 10px;
+  padding: 5px 5px 20px 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+  box-shadow: black 2px 2px 2px;
+  font-family: 'MinecraftiaRegular' ;
 }
 
-input:invalid {
-  border: 3px solid red;
+#generate-board:hover {
+  box-shadow: black 0px 0px 0px;
 }

@@ -1,0 +1,93 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* https://www.w3schools.com/cssref/playit.asp?filename=playcss_display&preval=flex */
+.color {
+  border: black solid 1px;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+#black {
+  background-color: rgb(0, 0, 0);
+}
+
+#blue {
+  background-color: blue;
+}
+
+#red {
+  background-color: red;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#pixel-board {
+  width: fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+}
+
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/repeat() */
+
+/* https://developer.mozilla.org/pt-BR/docs/Web/CSS
+/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#a_unidade_fr */
+
+/* https://www.w3schools.com/cssref/tryit.asp?filename=trycss_grid-template-columns */
+.pixel {
+  background-color: white;
+  border: 1px black solid;
+  width: 40px;
+  height: 40px;
+}
+
+.buttonDiv {
+  width: 225px;
+  height: 50px;
+  margin: 10px;
+}
+
+.button {
+  width: 50%;
+  height: 40px;
+}
+
+.button:hover {
+  cursor: pointer;
+  height: 45px;
+  border-radius: 5px;
+  font-size: 105%;
+}
+
+#board-size {
+  display: inline-block;
+  width: 20%;
+  height: 35px;
+}
+
+#generate-board {
+  width: 20%;
+  border: none;
+  color: rgb(26, 2, 2);
+  padding: 14px 22px 14px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+input:invalid {
+  border: 3px solid red;
+}

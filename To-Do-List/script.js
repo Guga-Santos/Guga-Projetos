@@ -167,14 +167,14 @@ botao.addEventListener('click', () => {
   const h1 = document.querySelector('h1');
   const left = document.querySelector('#left');
   const middle = document.querySelector('#middle');
-  if (h1.style.left == '20%') { 
+  if (h1.style.left == '25%') { 
   h1.style.left = '2%'
   botao.style.left = '0px'
-  left.style.width = '2%'
-  middle.style.width = '98%'
-  middle.style.left = '2%'
+  left.style.width = '0%'
+  middle.style.width = '100%'
+  middle.style.left = '0%'
   } else {
-  h1.style.left = '20%'
+  h1.style.left = '25%'
   botao.style.left = '18%'
   left.style.width = '20%'
   middle.style.width = '80%'

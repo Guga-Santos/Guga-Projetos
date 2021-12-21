@@ -1,31 +1,39 @@
 @font-face {
-  font-family: 'Shizuru';
-  src: url(./Shizuru-Regular.ttf);
+  font-family: 'Pushster';
+  src: url(./Pushster-Regular.ttf);
 }
 
 body{
-  background-color: #545775;
+  background-color: #050618;
 }
 
 header {
   display: block;
   height: fit-content;
   width: 100%;
-  background-color: #545775;
+  background-color: #050618;
  
 }
 
 #botao {
   margin-top: 0px;
-  width: 40%;
+  width: 2%;
   height: 50px;
   color: white;
-  background-color: #ffffff;
+  background-color: #000000;
   position: absolute;
   z-index: 1;
   left: 18%;
   top: 0px;
-  
+}
+
+#icone {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  left: 22%;
+  top: 4px;
 }
 
 h1 {
@@ -33,13 +41,12 @@ h1 {
   width: 100%;
   height: 40px;
   color: white;
-  background-color: #545775;
+  background-color: #050618;
   position: absolute;
-  left: 20%;
-  top: 0px;
-  padding-left: 30px;
-  padding-bottom: 10px;
-  font-family: 'Shizuru', cursive;
+  left: 25%;
+  top: 6px;
+  padding-left: 10px;
+  font-family: 'Pushster', cursive;
   font-size: 30px;
   z-index: 1;
 }
@@ -47,23 +54,26 @@ h1 {
 #left {
   width: 20%;
   height: 600px;
-  background-color: #90B494;
+  /* background-color: #fafffb; */
   display: inline-block;
   position: fixed;
   left: 0px;
   top: 50px;
   z-index: 0;
+  padding-top: 40px;
 }
 
 #middle {
   width: 80%;
   height: 600px;
-  background-color: #BFC8AD;
+  background-image: linear-gradient(rgb(75, 0, 130,0.2), rgb(255, 255, 129));
   display: inline-block;
   position: fixed;
-  top: 40px;
+  top: 50px;
   left: 20%;
   z-index: 0;
+  padding-left: 50px;
+  padding-top: 40px;
 }
 
 #calendario {
@@ -86,6 +96,51 @@ h1 {
 .day:hover {
   background-color: rgb(77, 129, 224);
   cursor: pointer;
+}
+
+.menu-esquerdo {
+  width: 90%;
+  height: 40px;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 1px solid rgb(0,0,0,0.3);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.menu-esquerdo:hover {
+  background-color: rgb(78, 36, 36);
+}
+
+#profile{
+  height: 120px ;
+}
+
+#foto-profile {
+  display: inline-block;
+  border: 1px solid rgb(0,0,0,0.3);
+  width: 30%;
+  height: 70px;
+  margin: 10px 0px 0px 10px;
+}
+
+#profile-photo {
+width: 100%;
+height: 70px;
+}
+
+#nome-profile {
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+
+#email {
+  margin-top: 5px;
+  margin-left: 10px; 
+  font-weight: 50; 
+  color: rgb(0,0,0,0.6);
 }
 
 .item {

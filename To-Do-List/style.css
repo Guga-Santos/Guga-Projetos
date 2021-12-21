@@ -23,7 +23,7 @@ header {
   background-color: #000000;
   position: absolute;
   z-index: 1;
-  left: 18%;
+  left: 20%;
   top: 0px;
 }
 
@@ -32,8 +32,9 @@ header {
   height: 40px;
   display: inline-block;
   position: absolute;
-  left: 22%;
+  left: 25%;
   top: 4px;
+  z-index: 2;
 }
 
 h1 {
@@ -43,9 +44,9 @@ h1 {
   color: white;
   background-color: #050618;
   position: absolute;
-  left: 25%;
   top: 6px;
-  padding-left: 10px;
+  left: 25%;
+  padding-left: 50px;
   font-family: 'Pushster', cursive;
   font-size: 30px;
   z-index: 1;
@@ -65,7 +66,7 @@ h1 {
 
 #middle {
   width: 80%;
-  height: 600px;
+  height: 100%;
   background-image: linear-gradient(rgb(75, 0, 130,0.2), rgb(255, 255, 129));
   display: inline-block;
   position: fixed;
@@ -80,27 +81,30 @@ h1 {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  background-color: cornflowerblue;
+  
   align-items: center;
-  width:50%;
+  width:80%;
   height: fit-content;
+  margin: auto;
+  margin-top: 100px;
 }
 
 .day {
   text-align: center;
   border: 1px solid rgb(0,0,0,0.3);
-  height: 30px;
+  height: 4.5em;
   padding-top: 5px;
+  background-color: rgb(255,255,255,0.9);
 }
 
 .day:hover {
-  background-color: rgb(77, 129, 224);
+  background-color: rgb(214, 214, 214);
   cursor: pointer;
 }
 
 .menu-esquerdo {
   width: 90%;
-  height: 40px;
+  height: 12%;
   margin: auto;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -110,30 +114,32 @@ h1 {
 }
 
 .menu-esquerdo:hover {
-  background-color: rgb(78, 36, 36);
+  background-color: rgb(214, 214, 214);
+  cursor: pointer;
 }
 
 #profile{
-  height: 120px ;
+  height: fit-content ;
 }
 
 #foto-profile {
   display: inline-block;
   border: 1px solid rgb(0,0,0,0.3);
   width: 30%;
-  height: 70px;
+  height: 30%;
   margin: 10px 0px 0px 10px;
 }
 
 #profile-photo {
 width: 100%;
-height: 70px;
+height: 100%;
 }
 
 #nome-profile {
   display: inline-block;
   margin-left: 5px;
   margin-bottom: 2px;
+  position: relative;
 }
 
 #email {

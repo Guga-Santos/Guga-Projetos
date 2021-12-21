@@ -1,9 +1,9 @@
 window.onload = document.querySelector('#black').className += ' selected';
-// window.onload = document.querySelector('#board-size').value = 5
-// Inicia adicionando a classe 'selected' a id 'black' onde se encontra a div referente à cor preta.
-
 const pixelBoard = document.querySelector('#pixel-board');
-
+window.onload = function() {
+  var context = new AudioContext();
+}
+// window.onload = document.querySelector('#audio-container').innerHTML = '<audio autoplay src="./midia/SuperMarioBros.mp3"></audio>'
 //
 let draw = false
 //

@@ -1,8 +1,14 @@
-const days = document.querySelector('#calendario');
+// const days = document.querySelector('#calendario');
 
-for (let day = 1; day <= 31; day += 1) {
-  days.insertAdjacentHTML("beforeend", `<div class="day">${day}</div>`)
-}
+// for (let day = 1; day <= 31; day += 1) {
+//   if (day % 7 === 0 || day % 7 === 6) {
+//     days.insertAdjacentHTML("beforeend", `<div class="day finalDeSemana">${day}</div>`)
+//   } else {
+//   days.insertAdjacentHTML("beforeend", `<div class="day">${day}</div>`)
+//   }
+// }
+
+// https://developer.mozilla.org/pt-BR/docs/Web/API/Element/insertAdjacentHTML
 
 const botao = document.querySelector('#botao');
 botao.addEventListener('click', () => {
@@ -12,12 +18,12 @@ botao.addEventListener('click', () => {
   const icone = document.querySelector('#icone');
   const menu = document.querySelector('.menu-esquerdo');
   if (h1.style.left == '25%') { 
-  h1.style.left = '3%'
+  h1.style.left = '6%'
   botao.style.left = '0px'
   left.style.width = '0%'
   middle.style.width = '100%'
   middle.style.left = '0%'
-  icone.style.left = '3%'
+  icone.style.left = '6%'
   } else {
   h1.style.left = '25%'
   botao.style.left = '20%'
@@ -27,6 +33,66 @@ botao.addEventListener('click', () => {
   icone.style.left = '25%'
   }
 })
+
+const data = new Date();
+
+data.setDate(1);
+
+const diasDoMes = document.querySelector('.dias')
+
+const ultimoDia = new Date(data.getFullYear(),data.getMonth() + 1 , 0).getDate();
+
+const primeiroDiaIndex = data.getDay();
+
+const ultimoDiaPREV = new Date(data.getFullYear(),data.getMonth(), 0).getDate();
+
+const ultimoDiaIndex = new Date(data.getFullYear(),data.getMonth() + 1 , 0).getDay();
+
+const proximoDia = 7 - ultimoDiaIndex - 1;
+
+
+
+const meses = [
+  "Janeiro",
+  "Fevereiro",
+  "Março",
+  "Abril",
+  "Maio",
+  "Junho",
+  "Julho",
+  "Agosto",
+  "Setembro",
+  "Outubro",
+  "Novembro",
+  "Dezembro"
+];
+
+document.querySelector('.dia h1').innerHTML = meses[data.getMonth()];
+
+document.querySelector('.dia p').innerHTML = data.toDateString();
+
+let dias = '';
+
+for (let j = primeiroDiaIndex; j > 0; j -= 1){
+  dias += `<div class="prev-date">${ultimoDiaPREV - j + 1}</div>`
+}
+
+for (let i = 1; i <= ultimoDia; i += 1) {
+  if(i === new Date().getDate() && data.getMonth() === new Date().getMonth()) { 
+    dias += `<div class="hoje">${i}</div>`;
+  } else {
+    dias += `<div>${i}</div>`;
+  }
+
+  }
+
+for (let k = 1; k <= proximoDia; k += 1) {
+  dias += `<div class="next-date">${k}</div>`
+  diasDoMes.innerHTML = dias;
+}
+
+
+
 
 
 

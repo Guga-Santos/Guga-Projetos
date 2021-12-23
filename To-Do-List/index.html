@@ -9,9 +9,11 @@
     <title>Minha To Do List</title>
 </head>
 <header>
-    <div id="botao"></div>
+    <div id="botao">
+        <img id="menu" src="./menu3.png" alt="icone do menu">
+    </div>
+    <h1 class="nome-to-do">My To-do List</h1>
     <img id="icone" src="./to-do-list.png" alt="icone de uma to-do list">
-    <h1>My To-do List</h1>
 </header>
 <body>
     <section id="left">
@@ -22,7 +24,7 @@
             <h3 id="nome-profile">João Alguém</h3>
             <h4 id="email">bolinhabolinha@gmail.com</h4>
         </div>
-        <div class="menu-esquerdo" id="datas"></div>
+        <div class="menu-esquerdo" id="datas">Calendário</div>
         <div class="menu-esquerdo" id="importante"></div>
         <div class="menu-esquerdo" id="urgente"></div>
         <div class="menu-esquerdo" id="listas"></div>
@@ -46,8 +48,28 @@
         <button id="mover-baixo">DOWN</button>
         <button id="remover-selecionado">Only</button>
     </div> -->
-    <div id="calendario">
-
+    <div class="container">
+        <div id="calendario">
+            <div class="meses">
+                <i class="fas-fa-angle-left preview"><</i>
+                <div class="dia" >
+                    <h1>Dezembro</h1>
+                    <p>Qui Dez 23, 2021 </p>
+                </div>
+                <i class="fas-fa-angle-right next">></i>
+            </div>
+            <div class="diasDaSemana">
+                <div>Dom</div>
+                <div>Seg</div>
+                <div>Ter</div>
+                <div>Qua</div>
+                <div>Qui</div>
+                <div>Sex</div>
+                <div>Sab</div>
+            </div>
+            <div class="dias">
+            </div>
+        </div>
     </div>
     </section>
     

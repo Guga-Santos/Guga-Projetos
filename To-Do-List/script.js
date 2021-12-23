@@ -1,15 +1,3 @@
-// const days = document.querySelector('#calendario');
-
-// for (let day = 1; day <= 31; day += 1) {
-//   if (day % 7 === 0 || day % 7 === 6) {
-//     days.insertAdjacentHTML("beforeend", `<div class="day finalDeSemana">${day}</div>`)
-//   } else {
-//   days.insertAdjacentHTML("beforeend", `<div class="day">${day}</div>`)
-//   }
-// }
-
-// https://developer.mozilla.org/pt-BR/docs/Web/API/Element/insertAdjacentHTML
-
 const botao = document.querySelector('#botao');
 botao.addEventListener('click', () => {
   const h1 = document.querySelector('h1');
@@ -33,6 +21,8 @@ botao.addEventListener('click', () => {
   icone.style.left = '25%'
   }
 })
+
+// ------------------------------------------------------------
 
 const data = new Date();
 

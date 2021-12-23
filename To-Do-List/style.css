@@ -75,33 +75,37 @@ body{
   transition: left 0.5s;
 }
 
+/* -------------------------------------------------------------- */
+
 .container {
   width: 100% ;
   height: 100vh;
-  background-color: #12121f;
-  color: #eee;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-content: center;
 }
 
 #calendario {
-  width: 45rem;
-  height: 52rem;
-  background-color: #222227;
-  box-shadow: 0.5rem 1rem rgba(0,0,0,.4);
+  /* width: 45rem;
+  height: 52rem; */
+  width: 80%;
+  height: fit-content;
+  padding-bottom: 5%;
+  padding-left: 35px;
+  box-shadow: 5px 5px rgba(0,0,0,.4);
 }
 
 .meses {
   width: 100%;
-  height: 12rem;
-  background-color: #167e56;
+  height: 12%;
+  background-color: #ffaa00;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0;
   text-align: center;
-  text-shadow: 0.1rem 0.3rem rgba(0,0,0,.5);
+  /* text-shadow: 0.1rem 0.3rem rgba(0,0,0,.5); */
 }
 
 .meses i {
@@ -133,10 +137,11 @@ font-size: 1.6rem;
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: .1rem ;
-  width: calc(44.2rem / 7);
+  width: calc(86% / 7);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 20px;
   text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,.5) ;
 }
 
@@ -145,22 +150,23 @@ width: 100%;
 display: flex;
 flex-wrap: wrap;
 padding: 0.2rem;
+padding-left: 20px;
 }
 
 .dias div {
   font-size: 1.4rem;
-  margin:  0.3rem;
-  width: calc(40.2rem / 7);
+  width: calc(95% / 7);
   height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,.5);
   transition: background-color .3s;
+  border: 1px solid rgba(0,0,0,.1);
 }
 
 .dias div:hover:not(.hoje) {
-  background-color: #2e2e2e;
+  background-color: #8b8b8b;
   cursor: pointer;
 }
 
@@ -169,7 +175,7 @@ padding: 0.2rem;
 }
 
 .hoje {
-  background-color: #157e56 ;
+  background-color: #ffaa00 ;
 }
 
 

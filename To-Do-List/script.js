@@ -36,61 +36,77 @@ botao.addEventListener('click', () => {
 
 const data = new Date();
 
-data.setDate(1);
+function calendario () {
 
-const diasDoMes = document.querySelector('.dias')
+  
+  data.setDate(1);
 
-const ultimoDia = new Date(data.getFullYear(),data.getMonth() + 1 , 0).getDate();
-
-const primeiroDiaIndex = data.getDay();
-
-const ultimoDiaPREV = new Date(data.getFullYear(),data.getMonth(), 0).getDate();
-
-const ultimoDiaIndex = new Date(data.getFullYear(),data.getMonth() + 1 , 0).getDay();
-
-const proximoDia = 7 - ultimoDiaIndex - 1;
-
-
-
-const meses = [
-  "Janeiro",
-  "Fevereiro",
-  "Março",
-  "Abril",
-  "Maio",
-  "Junho",
-  "Julho",
-  "Agosto",
-  "Setembro",
-  "Outubro",
-  "Novembro",
-  "Dezembro"
-];
-
-document.querySelector('.dia h1').innerHTML = meses[data.getMonth()];
-
-document.querySelector('.dia p').innerHTML = data.toDateString();
-
-let dias = '';
-
-for (let j = primeiroDiaIndex; j > 0; j -= 1){
-  dias += `<div class="prev-date">${ultimoDiaPREV - j + 1}</div>`
+  const diasDoMes = document.querySelector('.dias')
+  
+  const ultimoDia = new Date(data.getFullYear(),data.getMonth() + 1 , 0).getDate();
+  
+  const primeiroDiaIndex = data.getDay();
+  
+  const ultimoDiaPREV = new Date(data.getFullYear(),data.getMonth(), 0).getDate();
+  
+  const ultimoDiaIndex = new Date(data.getFullYear(),data.getMonth() + 1 , 0).getDay();
+  
+  const proximoDia = 7 - ultimoDiaIndex - 1;
+  
+  
+  
+  const meses = [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro"
+  ];
+  
+  document.querySelector('.dia h1').innerHTML = meses[data.getMonth()];
+  
+  document.querySelector('.dia p').innerHTML = data.toDateString();
+  
+  let dias = '';
+  
+  for (let j = primeiroDiaIndex; j > 0; j -= 1){
+    dias += `<div class="prev-date">${ultimoDiaPREV - j + 1}</div>`
+  }
+  
+  for (let i = 1; i <= ultimoDia; i += 1) {
+    if(i === new Date().getDate() && data.getMonth() === new Date().getMonth()) { 
+      dias += `<div class="hoje">${i}</div>`;
+    } else {
+      dias += `<div>${i}</div>`;
+    }
+  }
+  
+  for (let k = 1; k <= proximoDia; k += 1) {
+    dias += `<div class="next-date">${k}</div>`
+    diasDoMes.innerHTML = dias;
+  }
+  
 }
 
-for (let i = 1; i <= ultimoDia; i += 1) {
-  if(i === new Date().getDate() && data.getMonth() === new Date().getMonth()) { 
-    dias += `<div class="hoje">${i}</div>`;
-  } else {
-    dias += `<div>${i}</div>`;
-  }
 
-  }
+  document.querySelector('.preview').addEventListener('click', () => {
+    data.setMonth(data.getMonth() -1)
+    calendario()
+  })
+  
+  document.querySelector('.next').addEventListener('click', () => {
+    data.setMonth(data.getMonth() +1)
+    calendario()
+  })
 
-for (let k = 1; k <= proximoDia; k += 1) {
-  dias += `<div class="next-date">${k}</div>`
-  diasDoMes.innerHTML = dias;
-}
-
+  calendario()
 
 
 

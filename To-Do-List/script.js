@@ -1,3 +1,6 @@
+window.onload = document.querySelector('.container4').innerHTML = ''
+
+
 const botao = document.querySelector('#botao');
 botao.addEventListener('click', () => {
   const h1 = document.querySelector('h1');
@@ -24,6 +27,7 @@ botao.addEventListener('click', () => {
 
 // ------------------------------------------------------------
 function calendarioCompleto() { 
+  
 const data = new Date();
 
 function calendario () {
@@ -100,17 +104,19 @@ document.querySelector('.next').addEventListener('click', () => {
 
 }
 
+// -------------------------------------------------------------------------------------------------------------------------------------
+
 const calendar = document.querySelector('#datas');
 const lista = document.querySelector('#listas');
 
 calendar.addEventListener('click', () => {
-  document.querySelector('.container').innerHTML = '\n        <div id="calendario">\n            <div class="meses">\n                <i class="preview">&lt;</i>\n                <div class="dia">\n                    <h1>Dezembro</h1>\n                    <p>Qui Dez 23, 2021</p>\n                </div>\n                <i class="next">&gt;</i>\n            </div>\n            <div class="diasDaSemana">\n                <div>Dom</div>\n                <div>Seg</div>\n                <div>Ter</div>\n                <div>Qua</div>\n                <div>Qui</div>\n                <div>Sex</div>\n                <div>Sab</div>\n            </div>\n            <div class="dias">\n            </div>\n        </div>\n    '
+  document.querySelector('.container4').innerHTML = '\n        <div id="calendario">\n            <div class="meses">\n                <i class="preview">&lt;</i>\n                <div class="dia">\n                    <h1>Dezembro</h1>\n                    <p>Qui Dez 23, 2021</p>\n                </div>\n                <i class="next">&gt;</i>\n            </div>\n            <div class="diasDaSemana">\n                <div>Dom</div>\n                <div>Seg</div>\n                <div>Ter</div>\n                <div>Qua</div>\n                <div>Qui</div>\n                <div>Sex</div>\n                <div>Sab</div>\n            </div>\n            <div class="dias">\n            </div>\n        </div>\n    '
   
   calendarioCompleto()
 })
 
 lista.addEventListener('click', () => {
-  document.querySelector('.container').innerHTML = ''
+  document.querySelector('.container4').innerHTML = ''
 })
 
 

@@ -34,7 +34,7 @@ body{
 
 .nome-to-do {
   margin-top: 0px;
-  width: 10%;
+  width: 15%;
   height: 40px;
   color: white;
   background-color: transparent;
@@ -58,7 +58,7 @@ body{
   z-index: 0;
   padding-top: 40px;
   transition: width 0.5s;
-  /* transition: left 1s; */
+  /* transition: left 0.5s; */
 }
 
 #middle {
@@ -175,42 +175,6 @@ padding-left: 20px;
   background-color: #ffaa00 ;
 }
 
-
-/* 
-#calendario {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  align-items: center;
-  width:80%;
-  height: fit-content;
-  margin: auto;
-  margin-top: 100px;
-}
-
-.day {
-  text-align: center;
-  border: 1px solid rgb(0,0,0,0.1);
-  height: 4.5em;
-  padding-top: 5px;
-  background-color: rgb(255,255,255,0.9);
-  transition: background-color 0.5s;
-}
-
-.day:hover {
-  background-color: rgb(214, 214, 214);
-  cursor: pointer;
-}
-
-#semana {
-width: 80%;
-}
-
-.finalDeSemana {
-  color: blueviolet;
-} */
-
-
 .menu-esquerdo {
   width: 90%;
   height: 8%;
@@ -219,6 +183,8 @@ width: 80%;
   margin-bottom: 10px;
   border-radius: 5px;
   background-color: white;
+  text-align: center;
+  padding-top: 10%;
 }
 
 .menu-esquerdo:hover {
@@ -255,11 +221,12 @@ height: 100%;
 }
 
 #email {
+  font-size: 10px;
   display: inline-block;
   margin-left: 10px;
   margin-bottom: 2px;
   position: absolute;
-  top: 7%;
+  top: 12%;
   color: rgb(0,0,0,0.3);
 }
 

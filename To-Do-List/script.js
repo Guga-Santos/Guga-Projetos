@@ -66,7 +66,7 @@ function calendario () {
   
   document.querySelector('.dia h1').innerHTML = meses[data.getMonth()] + ' ' + data.getFullYear();
   
-  document.querySelector('.dia p').innerHTML = new Date().toDateString();
+  document.querySelector('.dia p').innerHTML = new Date().toLocaleDateString();
   
   let dias = '';
   
@@ -106,17 +106,48 @@ document.querySelector('.next').addEventListener('click', () => {
 
 // -------------------------------------------------------------------------------------------------------------------------------------
 
-const calendar = document.querySelector('#datas');
 const lista = document.querySelector('#listas');
+const metas = document.querySelector('#metas');
+const objetivos = document.querySelector('#objetivos')
+const calendar = document.querySelector('#datas');
+
+const container1 = document.querySelector('.container1');
+const container2 = document.querySelector('.container2');
+const container3 = document.querySelector('.container3');
+const container4 = document.querySelector('.container4');
+
+lista.addEventListener('click', () => {
+  container1.style.zIndex = 1
+  container2.style.zIndex = 0
+  container3.style.zIndex = 0
+  container4.style.zIndex = 0
+})
+
+metas.addEventListener('click', () => {
+  container1.style.zIndex = 0
+  container2.style.zIndex = 1
+  container3.style.zIndex = 0
+  container4.style.zIndex = 0
+})
+
+objetivos.addEventListener('click', () => {
+  container1.style.zIndex = 0
+  container2.style.zIndex = 0
+  container3.style.zIndex = 1
+  container4.style.zIndex = 0
+})
+
+calendar.addEventListener('click', () => {
+  container1.style.zIndex = 0
+  container2.style.zIndex = 0
+  container3.style.zIndex = 0
+  container4.style.zIndex = 1
+})
 
 calendar.addEventListener('click', () => {
   document.querySelector('.container4').innerHTML = '\n        <div id="calendario">\n            <div class="meses">\n                <i class="preview">&lt;</i>\n                <div class="dia">\n                    <h1>Dezembro</h1>\n                    <p>Qui Dez 23, 2021</p>\n                </div>\n                <i class="next">&gt;</i>\n            </div>\n            <div class="diasDaSemana">\n                <div>Dom</div>\n                <div>Seg</div>\n                <div>Ter</div>\n                <div>Qua</div>\n                <div>Qui</div>\n                <div>Sex</div>\n                <div>Sab</div>\n            </div>\n            <div class="dias">\n            </div>\n        </div>\n    '
   
   calendarioCompleto()
-})
-
-lista.addEventListener('click', () => {
-  document.querySelector('.container4').innerHTML = ''
 })
 
 

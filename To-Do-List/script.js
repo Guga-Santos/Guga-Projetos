@@ -107,8 +107,8 @@ document.querySelector('.next').addEventListener('click', () => {
 // -------------------------------------------------------------------------------------------------------------------------------------
 
 const lista = document.querySelector('#listas');
-const metas = document.querySelector('#metas');
-const objetivos = document.querySelector('#objetivos')
+const emProgresso = document.querySelector('#emProgresso');
+const completos = document.querySelector('#completos')
 const calendar = document.querySelector('#datas');
 
 const container1 = document.querySelector('.container1');
@@ -123,14 +123,14 @@ lista.addEventListener('click', () => {
   container4.style.zIndex = 0
 })
 
-metas.addEventListener('click', () => {
+emProgresso.addEventListener('click', () => {
   container1.style.zIndex = 0
   container2.style.zIndex = 1
   container3.style.zIndex = 0
   container4.style.zIndex = 0
 })
 
-objetivos.addEventListener('click', () => {
+completos.addEventListener('click', () => {
   container1.style.zIndex = 0
   container2.style.zIndex = 0
   container3.style.zIndex = 1

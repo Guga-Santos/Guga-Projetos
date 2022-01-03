@@ -258,6 +258,24 @@ inputText.addEventListener('keypress', function (e) {
   }
 })
 
+divOl.addEventListener('click', (e) => {
+  e.target.classList.add('marcado')
+})
+
+divOl.addEventListener('click', () => {
+  for(let i = 0; i < divOl.childElementCount; i +=1) {
+    if(divOl.children[i].classList.contains('marcado')) {
+      if(divOl.children[i].previousElementSibling.checked == true) {
+        divOl.children[i].previousElementSibling.checked = false
+      } else if ( divOl.children[i].previousElementSibling.checked == false) {
+        divOl.children[i].previousElementSibling.checked = true
+      }
+      divOl.children[i].classList.remove('marcado')
+    }
+  }
+})
+
+
 // Quando clicar no botão de criar, roda a função criarTarefa
 
 // function mudaBg(event) {

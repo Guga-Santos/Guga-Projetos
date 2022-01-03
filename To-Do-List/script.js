@@ -150,6 +150,7 @@ calendar.addEventListener('click', () => {
   calendarioCompleto()
 })
 
+// -------------------------------------------------------------------------------------------
 
 
 
@@ -229,6 +230,11 @@ function criarTarefa() {
   const lista = document.createElement('li');
   lista.classList.add('item');
 
+  const checkbox = document.createElement('input');
+  checkbox.setAttribute("type", "checkbox");
+  checkbox.classList.add('checkbox');
+
+  divOl.appendChild(checkbox)
   divOl.appendChild(lista);
   lista.innerText = document.querySelector('#texto-tarefa').value;
 

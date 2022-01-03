@@ -97,6 +97,10 @@ body{
   width: 100%;
 }
 
+#texto-tarefa {
+  width: 60%;
+}
+
 #botoes01 {
   display: block;
   width: 100%;
@@ -107,42 +111,37 @@ body{
   width: 100%;
 }
 
-#texto-tarefa, #criar-tarefa, #apaga-tudo, #remover-finalizados, #salvar-tarefas {
-  height: 4%;
-}
-
-
 .item {
   height: 20px;
-  width: fit-content;
-  border: 1px solid black;
+  width: 95%;
+  /* border: 1px solid black; */
   border-radius: 3px;
   background-color: white;
   padding: 5px 10px;
   margin: 5px;
+  display: inline-block;
+}
+
+.checkbox {
+  display: inline-block;
 }
 
 .item:hover {
   cursor: pointer;
+  background-color: rgb(214, 214, 214, 0.1);
 }
 
 .alvo {
-  background-color: gray;
+  background-color: transparent;
+  width: 78%;
+  text-decoration: none;
+  list-style-type: none;
+  padding-left: 0%;
 }
 
 
 .completed {
   text-decoration: line-through solid black;
-}
-
-#lista-tarefas {
-  background-color: white;
-  text-decoration: none;
-}
-
-#texto-tarefa {
-  width: 80%;
-  display: block;
 }
 
 /* ----------------------------------------------------------------------------- */

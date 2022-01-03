@@ -1,0 +1,54 @@
+.box {
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    display: flex;
+    position: absolute;
+}
+
+.one {
+    background-color: blue;
+}
+
+.two {
+    background-color: red;
+}
+
+.three {
+    background-color: yellow;
+}
+
+.four {
+    background-color: green;
+}
+
+.btn {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 410px;
+}
+
+#one {
+    background-color: blue;
+    border: 1px solid black;
+}
+
+#two {
+    background-color: red;
+    left: 110px;
+    border: 1px solid black;
+}
+
+#three {
+    background-color: yellow;
+    left: 210px;
+    border: 1px solid black;
+}
+
+#four {
+    background-color: green;
+    left: 310px;
+    border: 1px solid black;
+}

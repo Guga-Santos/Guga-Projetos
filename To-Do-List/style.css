@@ -82,15 +82,70 @@ body{
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
   position: absolute;
   top: 0;
   left: 0;
   padding-top: 8%;
   padding-left: 10%;
 }
-#texto-tarefa, #criar-tarefa, #apaga-tudo, #remover-finalizados, #salvar-tarefas {
-  height: 5%;
+
+#input-tarefa{
+  display: block;
+  width: 100%;
 }
+
+#botoes01 {
+  display: block;
+  width: 100%;
+}
+
+#botoes02 {
+  display: block;
+  width: 100%;
+}
+
+#texto-tarefa, #criar-tarefa, #apaga-tudo, #remover-finalizados, #salvar-tarefas {
+  height: 4%;
+}
+
+
+.item {
+  height: 20px;
+  width: fit-content;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: white;
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+.item:hover {
+  cursor: pointer;
+}
+
+.alvo {
+  background-color: gray;
+}
+
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+#lista-tarefas {
+  background-color: white;
+  text-decoration: none;
+}
+
+#texto-tarefa {
+  width: 80%;
+  display: block;
+}
+
+/* ----------------------------------------------------------------------------- */
 
 .container2 {
   background-image: linear-gradient(#a4c1c7,#edf1f2);
@@ -278,30 +333,5 @@ height: 100%;
   background-color: #ffaa00;
 }
 
-.item {
-  height: 20px;
-  width: fit-content;
-  border: 1px solid black;
-  border-radius: 3px;
-  background-color: white;
-  padding: 5px 10px;
-  margin: 5px;
-}
+/* ----------------------------------------------------------------------- */
 
-.item:hover {
-  cursor: pointer;
-}
-
-.alvo {
-  background-color: gray;
-}
-
-
-.completed {
-  text-decoration: line-through solid black;
-}
-
-#lista-tarefas {
-  background-color: white;
-  text-decoration: none;
-}

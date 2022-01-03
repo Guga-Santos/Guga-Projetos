@@ -113,7 +113,7 @@ body{
 
 .item {
   height: 20px;
-  width: 95%;
+  width: 80%;
   /* border: 1px solid black; */
   border-radius: 3px;
   background-color: white;
@@ -124,6 +124,9 @@ body{
 
 .checkbox {
   display: inline-block;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
 }
 
 .item:hover {

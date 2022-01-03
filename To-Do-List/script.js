@@ -234,8 +234,11 @@ function criarTarefa() {
   checkbox.setAttribute("type", "checkbox");
   checkbox.classList.add('checkbox');
 
+  const br = document.createElement('br');
+
   divOl.appendChild(checkbox)
   divOl.appendChild(lista);
+  divOl.appendChild(br);
   lista.innerText = document.querySelector('#texto-tarefa').value;
 
   document.querySelector('#texto-tarefa').value = '';
@@ -246,6 +249,14 @@ function criarTarefa() {
 const button = document.querySelector('#criar-tarefa');
 
 button.addEventListener('click', criarTarefa);
+
+const inputText = document.querySelector('#texto-tarefa');
+
+inputText.addEventListener('keypress', function (e) {
+  if(e.key === 'Enter') {
+    criarTarefa()
+  }
+})
 
 // Quando clicar no botão de criar, roda a função criarTarefa
 

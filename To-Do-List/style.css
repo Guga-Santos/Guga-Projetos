@@ -127,6 +127,7 @@ body{
   height: 25px;
   width: 25px;
   background-color: #eee;
+  pointer-events: none;
 }
 
 .item:hover {

@@ -1,4 +1,5 @@
 window.onload = document.querySelector('.container4').innerHTML = ''
+window.onload = document.querySelector('.container1').style.zIndex = '1'
 
 
 const botao = document.querySelector('#botao');
@@ -264,16 +265,19 @@ divOl.addEventListener('click', (e) => {
 
 divOl.addEventListener('click', () => {
   for(let i = 0; i < divOl.childElementCount; i +=1) {
-    if(divOl.children[i].classList.contains('marcado')) {
+    if(divOl.children[i].classList.contains('marcado') && divOl.children[i].classList.contains('marcado') ) {
       if(divOl.children[i].previousElementSibling.checked == true) {
         divOl.children[i].previousElementSibling.checked = false
+        divOl.children[i].style.border = ''
       } else if ( divOl.children[i].previousElementSibling.checked == false) {
         divOl.children[i].previousElementSibling.checked = true
+        divOl.children[i].style.border = '1px solid black'
       }
       const marcado = document.querySelectorAll('.marcado');
       for(let j = 0; j < marcado.length; j += 1){ 
         marcado[j].classList.remove('marcado')
       }
+      divOl.children[i].classList.remove('marcado')
     }
   }
 })

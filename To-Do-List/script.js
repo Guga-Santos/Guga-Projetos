@@ -270,7 +270,10 @@ divOl.addEventListener('click', () => {
       } else if ( divOl.children[i].previousElementSibling.checked == false) {
         divOl.children[i].previousElementSibling.checked = true
       }
-      divOl.children[i].classList.remove('marcado')
+      const marcado = document.querySelectorAll('.marcado');
+      for(let j = 0; j < marcado.length; j += 1){ 
+        marcado[j].classList.remove('marcado')
+      }
     }
   }
 })

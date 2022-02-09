@@ -1,0 +1,131 @@
+:root {
+  --verde-escuro: rgb(3,107,82);
+  --verde-claro: rgb(47,193,140);
+  --roxo-escuro: rgb(65,25,127);
+  --roxo-claro: rgb(137,88,163);
+  --azul-escuro: rgb(0,109,251);
+  --azul-claro: rgb(0,213,226);
+  --cinza-claro: rgb(225,229,235);
+  --cinza1: rgb(62,66,75);
+  --cinza2: rgb(40,42,47);
+  --cinza3: rgb(30,31,36);
+  --cinza4: rgb(26,27,28);
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--cinza4);
+  color: white;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 75px;
+}
+
+header .logo-title {
+  display: flex;
+  align-items: center;
+}
+
+header .title {
+  font-size: 2.5rem;
+}
+
+header .image-logo {
+  height: 80px;
+}
+
+header .player-container {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.step {
+  width: 30%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.step h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.genre-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.genre-cards section {
+  background-color: var(--cinza3);
+  margin: 20px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.genre-cards section:hover {
+  background-color: var(--cinza2);
+}
+
+.genre-cards img {
+  height: 180px;
+  margin-bottom: 20px;
+}
+
+.genre-cards p {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.playlist-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-card {
+  background-color: var(--cinza2);
+  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.text-card:hover {
+  background-color: var(--cinza1);
+}
+
+.tracks-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-selected {
+  background-color: var(--cinza-claro) !important;
+  color: var(--cinza3) !important;
+}

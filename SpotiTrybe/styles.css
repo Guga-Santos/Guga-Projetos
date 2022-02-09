@@ -24,6 +24,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--cinza4);
   color: white;
+  overflow: hidden;
+  padding: 0px 50px;
 }
 
 header {
@@ -75,6 +77,8 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .genre-cards section {
@@ -91,11 +95,13 @@ main {
 .genre-cards img {
   height: 180px;
   margin-bottom: 20px;
+  pointer-events: none;
 }
 
 .genre-cards p {
   font-weight: 700;
   font-size: 1.2rem;
+  pointer-events: none;
 }
 
 .playlist-cards {
@@ -103,6 +109,10 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.playlist-title {
+  pointer-events: none;
 }
 
 .text-card {
@@ -125,7 +135,20 @@ main {
   align-items: center;
 }
 
+.track-title {
+  pointer-events: none;
+}
+
 .item-selected {
   background-color: var(--cinza-claro) !important;
   color: var(--cinza3) !important;
+}
+
+.player-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#playing-music-name {
+  padding: 10px 5px;
 }

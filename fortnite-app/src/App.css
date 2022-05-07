@@ -1,0 +1,129 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  */
+
+.userInputs-Container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 80vw;
+  height: 8vh;
+}
+
+.userInputs-Container label {
+  display: flex;
+  justify-content: space-between;
+
+  width: 30vw;
+}
+
+.userInputs-Container label > input {
+ width: 22vw;
+}
+
+/*  */
+
+.table-container {
+  width: 75vw;
+}
+
+tr {
+  display: flex;
+
+  height: 4vh;
+
+  border: 1px black solid;
+}
+
+th,
+td {
+  width: 24.75vw;
+}
+
+th {
+  text-align: left;
+}
+
+/*  */
+
+.maps-container {
+  display: flex;
+  align-items: center;
+}
+
+.maps-container img {
+  max-width: 40vw;
+}
+
+.maps-container button {
+  width: 8vw;
+  height: 6vh;
+}
+
+.maps-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+/*  */
+
+.uncoming-container{
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 80vw;
+}
+
+.upcoming-card {
+  width: 20vw;
+
+  margin-top: 2vh;
+}
+
+.upcoming-card img {
+  max-width: 18vw;
+}
+
+/*  */
+
+.news-container {
+  width: 80vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-container button {
+  height: 6vh;
+}
+
+.news-card {
+  width: 60vw;
+}
+
+.news-card img {
+  max-width: 60vw;
+}
+
+/*  */
+
+.video-container {
+  display: flex;
+  align-items: center;
+}
+
+.video-container button {
+  max-height: 6vh;
+}
+
+iframe {
+  width: 50vw;
+  height: 50vh;
+}

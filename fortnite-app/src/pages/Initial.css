@@ -1,0 +1,33 @@
+.character {
+    width: 40vw;
+    min-width: 500px;
+    height: 72vh;
+    position: absolute;
+    top: -1.9vh;
+
+  
+    animation-name: char;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+  }
+  
+  @keyframes char {
+    0% {left: 80vw }
+    100% {left: 0vw;}
+  }
+  
+  .char-background {
+    width: 100vw;
+    height: 62vh;
+    background-color: blueviolet;
+
+    background: radial-gradient(circle at 5%, rgb(215, 173, 255), blueviolet );
+  }
+  
+  .char-background-border {
+    background-color: yellow;
+    width: 100vw;
+    height: 3vh;
+  
+    position: absolute;
+  }

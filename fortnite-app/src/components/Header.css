@@ -1,0 +1,77 @@
+.header-container {
+    width: 100vw;
+    height: 8vh;
+
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 3vw;
+    height: 14vh;
+
+    filter: invert(100%);
+    image-rendering: pixelated;
+
+    cursor: pointer;
+}
+
+.nav-bar {
+    width: 50vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-right: 3vw;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 0.7vw;
+
+    width: 9vw ;
+    height: 8vh;
+
+    cursor: pointer;
+}
+
+.nav-links:hover {
+    padding-top: 1.5vh;
+    box-sizing: border-box;
+    border-bottom: 1.5vh solid yellow;
+}
+
+.download {
+    width: 10vw;
+    height: 8vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3vh;
+    font-weight: 900;
+    
+    background-color: yellow;
+    color: rgba(0, 0, 0, 0.9);
+
+    cursor: pointer;
+}
+
+.anchor-header {
+    text-decoration: none;
+    color: black;
+}
+
+.anchor-header:hover {
+    text-decoration: underline;
+    color: indigo;
+}

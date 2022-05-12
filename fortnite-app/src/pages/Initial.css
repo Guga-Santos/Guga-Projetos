@@ -5,6 +5,8 @@
     position: absolute;
     top: -1.9vh;
 
+    user-select: none;
+
   
     animation-name: char;
     animation-duration: 3s;

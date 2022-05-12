@@ -18,6 +18,12 @@
     image-rendering: pixelated;
 
     cursor: pointer;
+
+    z-index: 1000;
+}
+
+.logo:hover {
+    height: 14.5vh;
 }
 
 .nav-bar {
@@ -47,6 +53,15 @@
     padding-top: 1.5vh;
     box-sizing: border-box;
     border-bottom: 1.5vh solid yellow;
+
+    animation-name: borderNav;
+    animation-duration: 0.3s;
+}
+
+@keyframes borderNav {
+    0% {  border-bottom: 0.01vh solid yellow; padding-top: 0vh }
+    100% {  border-bottom: 1.5vh solid yellow; padding-top: 1.5vh }
+    
 }
 
 .download {
@@ -66,12 +81,11 @@
     cursor: pointer;
 }
 
+.download:hover {
+    background-color: rgba(255, 255, 0, 0.9);
+}
+
 .anchor-header {
     text-decoration: none;
     color: black;
-}
-
-.anchor-header:hover {
-    text-decoration: underline;
-    color: indigo;
 }

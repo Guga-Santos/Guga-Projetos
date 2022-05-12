@@ -1,8 +1,14 @@
+* {
+  overflow: hidden;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  overflow: hidden;
 }
 
 /*  */
@@ -73,25 +79,6 @@ th {
 
 /*  */
 
-.maps-container {
-  display: flex;
-  align-items: center;
-}
-
-.maps-container img {
-  max-width: 40vw;
-}
-
-.maps-container button {
-  width: 8vw;
-  height: 6vh;
-}
-
-.maps-inputs {
-  display: flex;
-  flex-direction: column;
-}
-
 /*  */
 
 .uncoming-container{
@@ -108,31 +95,10 @@ th {
 }
 
 .upcoming-card img {
-  max-width: 11vw;
+  max-width: 8vw;
 }
 
 /*  */
-
-.news-container {
-  width: 80vw;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.news-container button {
-  height: 6vh;
-}
-
-.news-card {
-  width: 60vw;
-}
-
-.news-card img {
-  max-width: 60vw;
-}
-
 /*  */
 
 .video-container {
